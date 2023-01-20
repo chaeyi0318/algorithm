@@ -1,0 +1,15 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        for(int i = 0; i <= n; i++) {
+            if(i % 2 == 0)
+                answer += i;
+        }
+        return answer;
+    }
+}
+
+코드 풀이
+
+for문을 사용해서 i가 n보다 작거나 같을 때까지 반복을 하고 i는 하나씩 증가한다.
+짝수를 찾기 위해 if문을 사용해서 i % 2의 나머지가 0일 경우만 answer에 값을 더해준다.
