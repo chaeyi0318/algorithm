@@ -1,3 +1,5 @@
+문제 : 짝수의 합 (https://school.programmers.co.kr/learn/courses/30/lessons/120831)
+
 class Solution {
     public int solution(int n) {
         int answer = 0;
