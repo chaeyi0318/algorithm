@@ -1,0 +1,23 @@
+문제 : 배열의 평균값 (https://school.programmers.co.kr/learn/courses/30/lessons/120817)
+
+class Solution {
+    public double solution(int[] numbers) {
+        double answer = 0;
+        double result = 0;
+
+        for(int i = 0; i < numbers.length; i ++) {
+            result += numbers[i];
+        }
+
+        answer = result / numbers.length;
+
+        return answer;
+    }
+}
+
+코드풀이
+
+값을 담기 위해 result 변수 선언을 하고, 배열에 있는 값을 모두 더하기 위해 for문을 사용했다.
+i가 numbers 배열의 길이만큼 반복되도록 .length를 사용했고 i는 1씩 증가한다.
+numbers[0] 값이 result에 있던 값 0과 더해져서 다시 result에 담기고, numbers[1]의 값이 result에 있는 값과 더해져서 result에 담긴다.
+이 방법을 numbers의 배열 길이만큼 반복하고 반복문이 끝나게 되면 평균을 구하기 위해서 result의 값을 numbers의 길이만큼 나눠준다.
