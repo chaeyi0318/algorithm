@@ -9,7 +9,7 @@ class Solution {
 
         int min = arr[0];
 
-        int index = 0;
+        // int index = 0;
         
         for (int i = 0; i < arr.length; i++) {
             min = Math.min(min, arr[i]);
@@ -19,7 +19,7 @@ class Solution {
             if(min == arr[i]) {
                 continue;
             } 
-            answer[index++] = arr[i];
+            answer[i] = arr[i];
         }
         return answer;
     }
