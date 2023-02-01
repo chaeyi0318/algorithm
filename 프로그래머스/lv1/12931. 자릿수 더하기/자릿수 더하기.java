@@ -2,11 +2,12 @@ import java.util.*;
 
 public class Solution {
     public int solution(int n) {
+        long l = n;
         int answer = 0;
 
-        while(n > 0) {
-            answer += n % 10;
-            n /= 10;
+        while(l > 0) {
+            answer += l % 10;
+            l /= 10;
         }
         return answer;
     }
