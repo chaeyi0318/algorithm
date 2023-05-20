@@ -4,13 +4,16 @@ import java.util.List;
 
 class Solution {
     public String[] solution(String[] strArr) {
-        ArrayList<String> answer = new ArrayList<>();
+        List<String> strList = new ArrayList<>(Arrays.asList(strArr));
         
-        for (int i = 0; i < strArr.length; i++) {
-            if (!strArr[i].contains("ad")) {
-                answer.add(strArr[i]);
+        for (int i = 0; i < strList.size(); i++) {
+            if (strList.get(i).contains("ad")) {
+                strList.remove(i);
             }
         }
-        return answer.toArray(new String[0]);
+        
+        String[] answer = strList.toArray(new String[strList.size()]);
+        
+        return answer;
     }
 }
