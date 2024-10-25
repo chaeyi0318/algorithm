@@ -32,9 +32,7 @@ public class Main {
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
 		for (int i = 0; i < N; i++) {
-			if (st.hasMoreTokens()) {
-				card[i] = Integer.parseInt(st.nextToken());
-			}
+			card[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		Arrays.sort(card);
@@ -45,14 +43,15 @@ public class Main {
 		st = new StringTokenizer(br.readLine(), " ");
 		
 		for (int i = 0; i < M; i++) {
-			if (st.hasMoreTokens()) {
-				numArr[i] = Integer.parseInt(st.nextToken());
-			}
+			numArr[i] = Integer.parseInt(st.nextToken());
 		}
 		
+		StringBuilder sb = new StringBuilder();
+		
 		for (int i = 0; i < M; i++) {
-			int result = binarySearch(numArr[i], card);
-			System.out.print(result + " ");
+			sb.append(binarySearch(numArr[i], card) + " ");
 		}
+		
+		System.out.println(sb.toString());
 	}
 }
